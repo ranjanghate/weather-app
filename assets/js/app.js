@@ -6,7 +6,7 @@ const successMessage = document.querySelector('#success');
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const url = `http://localhost:3000/weather?address=${address.value}`;
+  const url = `/weather?address=${address.value}`;
   fetch(url).then((response) => {
     response.json().then((data) => {
       successMessage.textContent = 'Loading...';
